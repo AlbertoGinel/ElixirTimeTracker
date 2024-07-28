@@ -1,0 +1,91 @@
+GET http://localhost:4000/api/stamps_complete HTTP/1.1
+content-type: application/json
+
+###
+
+
+GET http://localhost:4000/api/stamps HTTP/1.1
+content-type: application/json
+
+###
+
+
+POST  http://localhost:4000/api/stamps/create_now HTTP/1.1
+content-type: application/json
+
+{
+  "id": 7,
+  "type": "start"
+}
+
+###
+
+
+GET https://scandiweb-test-da56cd067ba1.herokuapp.com/products/20 HTTP/1.1
+content-type: application/json
+
+###
+
+POST https://scandiweb-test-da56cd067ba1.herokuapp.com/products HTTP/1.1
+content-Type: application/json
+
+{
+  "SKU": "kik.iki",
+  "name": "Back to the Future 0.5",
+  "price": 39.99,
+  "size": 4812,
+  "type": "DVD"
+}
+
+###
+
+PATCH  https://scandiweb-test-da56cd067ba1.herokuapp.com/products/57 HTTP/1.1
+content-type: application/json
+
+{
+  "SKU": "eseto",
+  "name": "Back to the Future 0.5",
+	"price": 39.99,
+	"size": 4812,
+	"type": "DVD",
+	"weight": null,
+	"height": null,
+	"width": null,
+	"length": null,
+
+}
+
+###
+
+DELETE https://scandiweb-test-da56cd067ba1.herokuapp.com/products/57 HTTP/1.1
+content-type: application/json
+
+###
+
+
+DELETE https://localhost/DaveHollingworth/REST_API/products/ HTTP/1.1
+content-type: application/json
+
+{
+	"idList": [2,3,4]
+}
+
+
+###
+
+POST  https://scandiweb-test-da56cd067ba1.herokuapp.com/products/ HTTP/1.1
+content-type: application/json
+
+{
+	"idList": [30,31,32]
+}
+
+###
+
+OPTIONS  https://scandiweb-test-da56cd067ba1.herokuapp.com/products/ HTTP/1.1
+content-type: application/json
+
+
+###
+
+OPTIONS  https://scandiweb-test-da56cd067ba1.herokuapp.com/products/ HTTP/1.1

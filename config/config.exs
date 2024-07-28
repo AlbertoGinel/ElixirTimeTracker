@@ -1,18 +1,12 @@
-# This file is responsible for configuring your application
-# and its dependencies with the aid of the Config module.
-#
-# This configuration file is loaded before any dependency and
-# is restricted to this project.
-
 # General application configuration
 import Config
 
-config :juaBado,
+config :juabado,
   ecto_repos: [JuaBado.Repo],
   generators: [timestamp_type: :utc_datetime]
 
 # Configures the endpoint
-config :juaBado, JuaBadoWeb.Endpoint,
+config :juabado, JuaBadoWeb.Endpoint,
   url: [host: "localhost"],
   adapter: Bandit.PhoenixAdapter,
   render_errors: [
@@ -22,23 +16,17 @@ config :juaBado, JuaBadoWeb.Endpoint,
   pubsub_server: JuaBado.PubSub,
   live_view: [signing_salt: "xOaoOO0Z"]
 
-  # Configuring the PubSub Adapter
-  config :juaBado, JuaBadoWeb.PubSub,
+# Configuring the PubSub Adapter
+config :juabado, JuaBadoWeb.PubSub,
   adapter: Phoenix.PubSub.PG2
 
 # Configures the mailer
-#
-# By default it uses the "Local" adapter which stores the emails
-# locally. You can see the emails in your browser, at "/dev/mailbox".
-#
-# For production it's recommended to configure a different adapter
-# at the `config/runtime.exs`.
-config :juaBado, JuaBado.Mailer, adapter: Swoosh.Adapters.Local
+config :juabado, JuaBado.Mailer, adapter: Swoosh.Adapters.Local
 
 # Configure esbuild (the version is required)
 config :esbuild,
   version: "0.17.11",
-  juaBado: [
+  juabado: [
     args:
       ~w(js/app.js --bundle --target=es2017 --outdir=../priv/static/assets --external:/fonts/* --external:/images/*),
     cd: Path.expand("../assets", __DIR__),
@@ -48,7 +36,7 @@ config :esbuild,
 # Configure tailwind (the version is required)
 config :tailwind,
   version: "3.4.3",
-  juaBado: [
+  juabado: [
     args: ~w(
       --config=tailwind.config.js
       --input=css/app.css

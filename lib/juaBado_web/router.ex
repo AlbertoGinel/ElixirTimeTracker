@@ -40,7 +40,7 @@ defmodule JuaBadoWeb.Router do
     post "/stamps/create_now", StampsController, :create_now_stamp
   end
 
-  def dashboard_path(conn, _params), do: Routes.live_dashboard_path(conn, %{})
+  #def dashboard_path(conn, _params), do: Routes.live_dashboard_path(conn, %{})
 
 
   # Enable LiveDashboard and Swoosh mailbox preview in development

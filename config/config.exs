@@ -59,5 +59,5 @@ config :phoenix, :json_library, Jason
 import_config "#{config_env()}.exs"
 # config/config.exs
 
-config :jua_bado, JuaBadoWeb.Endpoint,
+config :juabado, JuaBadoWeb.Endpoint,
 http: [port: System.get_env("PORT") || 4000]  # Default PORT configuration

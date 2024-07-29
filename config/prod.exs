@@ -30,4 +30,5 @@ config :my_app, MyApp.Repo,
 
 # config/prod.exs
 config :juabado, JuaBadoWeb.Endpoint,
-  http: [port: System.get_env("PORT") || 4000]  # Use the PORT env var or default to 4000
+  http: [port: System.get_env("PORT") || 4000],  # Use the PORT env var or default to 4000
+  url: [scheme: "http", port: 4000]

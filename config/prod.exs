@@ -18,3 +18,11 @@ config :logger, level: :info
 
 # Runtime production configuration, including reading
 # of environment variables, is done on config/runtime.exs.
+config :my_app, MyApp.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  username: "ca8405f3-8d95-4dd3-9461-53e8e9fcefd3-user",
+  password: "pw-dcb74bbd-f6a8-4e5f-b744-c7e1120b68b1",
+  database: "ca8405f3-8d95-4dd3-9461-53e8e9fcefd3",
+  hostname: "postgres-free-tier-v2020.gigalixir.com",
+  pool_size: 10,
+  ssl: false

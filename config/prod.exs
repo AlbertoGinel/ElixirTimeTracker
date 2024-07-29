@@ -29,5 +29,5 @@ config :my_app, MyApp.Repo,
   ssl: false
 
 # config/prod.exs
-config :jua_bado, JuaBadoWeb.Endpoint,
+config :juabado, JuaBadoWeb.Endpoint,
   http: [port: System.get_env("PORT") || 4000]  # Use the PORT env var or default to 4000

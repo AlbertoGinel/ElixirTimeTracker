@@ -20,10 +20,10 @@ config :logger, level: :info
 # of environment variables, is done on config/runtime.exs.
 
 config :my_app, MyApp.Repo,
-  adapter: Ecto.Adapters.Postgres, # Or whichever adapter you're using
-  username: System.fetch_env!("ca8405f3-8d95-4dd3-9461-53e8e9fcefd3-user"),
-  password: System.fetch_env!("pw-dcb74bbd-f6a8-4e5f-b744-c7e1120b68b1"),
-  database: System.fetch_env!("ca8405f3-8d95-4dd3-9461-53e8e9fcefd3"),
-  hostname: System.fetch_env!("postgres-free-tier-v2020.gigalixir.com"),
-  pool_size: String.to_integer(System.fetch_env!("POOL_SIZE") || "10"),
-  ssl: false # Disable SSL
+  adapter: Ecto.Adapters.Postgres,
+  username: "ca8405f3-8d95-4dd3-9461-53e8e9fcefd3-user",
+  password: "pw-dcb74bbd-f6a8-4e5f-b744-c7e1120b68b1",
+  database: "ca8405f3-8d95-4dd3-9461-53e8e9fcefd3",
+  hostname: "postgres-free-tier-v2020.gigalixir.com",
+  pool_size: 10,
+  ssl: false

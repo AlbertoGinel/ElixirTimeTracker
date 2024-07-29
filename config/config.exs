@@ -7,7 +7,7 @@ config :juabado,
 
 # Configures the endpoint
 config :juabado, JuaBadoWeb.Endpoint,
-  url: [host: "localhost"],
+  #url: [host: "localhost"],
   adapter: Bandit.PhoenixAdapter,
   render_errors: [
     formats: [html: JuaBadoWeb.ErrorHTML, json: JuaBadoWeb.ErrorJSON],
@@ -60,4 +60,5 @@ import_config "#{config_env()}.exs"
 # config/config.exs
 
 config :juabado, JuaBadoWeb.Endpoint,
-http: [port: System.get_env("PORT") || 4000]  # Default PORT configuration
+  http: [port: System.get_env("PORT") || 4000],  # Default PORT configuration
+  url: [host: "postgres-free-tier-v2020.gigalixir.com"]

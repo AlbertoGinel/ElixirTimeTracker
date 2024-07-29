@@ -57,3 +57,7 @@ config :phoenix, :json_library, Jason
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{config_env()}.exs"
+# config/config.exs
+
+config :jua_bado, JuaBadoWeb.Endpoint,
+http: [port: System.get_env("PORT") || 4000]  # Default PORT configuration

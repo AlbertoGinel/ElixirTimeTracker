@@ -16,6 +16,7 @@ config :juabado, JuaBadoWeb.Endpoint,
   pubsub_server: JuaBado.PubSub,
   live_view: [signing_salt: "xOaoOO0Z"]
 
+
 # Configuring the PubSub Adapter
 config :juabado, JuaBadoWeb.PubSub,
   adapter: Phoenix.PubSub.PG2

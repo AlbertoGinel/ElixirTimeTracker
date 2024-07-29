@@ -27,3 +27,7 @@ config :my_app, MyApp.Repo,
   hostname: "postgres-free-tier-v2020.gigalixir.com",
   pool_size: 10,
   ssl: false
+
+# config/prod.exs
+config :jua_bado, JuaBadoWeb.Endpoint,
+  http: [port: System.get_env("PORT") || 4000]  # Use the PORT env var or default to 4000

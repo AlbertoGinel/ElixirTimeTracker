@@ -1,5 +1,5 @@
-defmodule juabadoWeb.PageControllerTest do
-  use juabadoWeb.ConnCase
+defmodule JuabadoWeb.PageControllerTest do
+  use JuabadoWeb.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get(conn, ~p"/")

@@ -1,4 +1,4 @@
-defmodule juabadoWeb.Endpoint do
+defmodule JuabadoWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :juabado
 
   # The session will be stored in the cookie and signed,
@@ -23,7 +23,7 @@ defmodule juabadoWeb.Endpoint do
     at: "/",
     from: :juabado,
     gzip: false,
-    only: juabadoWeb.static_paths()
+    only: JuabadoWeb.static_paths()
 
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
@@ -49,5 +49,5 @@ defmodule juabadoWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
-  plug juabadoWeb.Router
+  plug JuabadoWeb.Router
 end

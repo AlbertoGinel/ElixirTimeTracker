@@ -13,7 +13,7 @@ activities_path
     secondsFree: Map.get(attrs, "secondsFree", 0) # Default seconds free to 0 if not provided
   }
 
-	case juabado.Activities.create_activity(activity) do
+	case Juabado.Activities.create_activity(activity) do
 		{:ok, _activity} -> :ok
 		{:error, _changeset} -> :duplicate
 	end
@@ -34,7 +34,7 @@ stamps_path
 
   IO.inspect(stamp)
 
-  case juabado.Stamps.create_stamp(stamp) do
+  case Juabado.Stamps.create_stamp(stamp) do
     {:ok, _stamp} -> :ok
     {:error, _changeset} ->
       :duplicate

@@ -1,12 +1,12 @@
-defmodule juabadoWeb do
+defmodule JuabadoWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, components, channels, and so on.
 
   This can be used in your application as:
 
-      use juabadoWeb, :controller
-      use juabadoWeb, :html
+      use JuabadoWeb, :controller
+      use JuabadoWeb, :html
 
   The definitions below will be executed for every controller,
   component, etc, so keep them short and clean, focused
@@ -40,10 +40,10 @@ defmodule juabadoWeb do
     quote do
       use Phoenix.Controller,
         formats: [:html, :json],
-        layouts: [html: juabadoWeb.Layouts]
+        layouts: [html: JuabadoWeb.Layouts]
 
       import Plug.Conn
-      import juabadoWeb.Gettext
+      import JuabadoWeb.Gettext
 
       unquote(verified_routes())
     end
@@ -52,7 +52,7 @@ defmodule juabadoWeb do
   def live_view do
     quote do
       use Phoenix.LiveView,
-        layout: {juabadoWeb.Layouts, :app}
+        layout: {JuabadoWeb.Layouts, :app}
 
       unquote(html_helpers())
     end
@@ -84,8 +84,8 @@ defmodule juabadoWeb do
       # HTML escaping functionality
       import Phoenix.HTML
       # Core UI components and translation
-      import juabadoWeb.CoreComponents
-      import juabadoWeb.Gettext
+      import JuabadoWeb.CoreComponents
+      import JuabadoWeb.Gettext
 
       # Shortcut for generating JS commands
       alias Phoenix.LiveView.JS
@@ -98,9 +98,9 @@ defmodule juabadoWeb do
   def verified_routes do
     quote do
       use Phoenix.VerifiedRoutes,
-        endpoint: juabadoWeb.Endpoint,
-        router: juabadoWeb.Router,
-        statics: juabadoWeb.static_paths()
+        endpoint: JuabadoWeb.Endpoint,
+        router: JuabadoWeb.Router,
+        statics: JuabadoWeb.static_paths()
     end
   end
 

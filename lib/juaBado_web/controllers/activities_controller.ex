@@ -1,6 +1,6 @@
-defmodule juabadoWeb.ActivitiesController do
+defmodule JuabadoWeb.ActivitiesController do
   use Phoenix.Controller, formats: [:json]
-  alias juabado.Activities
+  alias Juabado.Activities
 
 	def index(conn, _params) do
 		activities = %{activities: Activities.list_activities()}

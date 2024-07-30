@@ -2,27 +2,27 @@
 import Config
 
 config :juabado,
-  ecto_repos: [juabado.Repo],
+  ecto_repos: [Juabado.Repo],
   generators: [timestamp_type: :utc_datetime]
 
 # Configures the endpoint
-config :juabado, juabadoWeb.Endpoint,
+config :juabado, JuabadoWeb.Endpoint,
   #url: [host: "localhost"],
   adapter: Bandit.PhoenixAdapter,
   render_errors: [
-    formats: [html: juabadoWeb.ErrorHTML, json: juabadoWeb.ErrorJSON],
+    formats: [html: JuabadoWeb.ErrorHTML, json: JuabadoWeb.ErrorJSON],
     layout: false
   ],
-  pubsub_server: juabado.PubSub,
+  pubsub_server: Juabado.PubSub,
   live_view: [signing_salt: "xOaoOO0Z"]
 
 
 # Configuring the PubSub Adapter
-config :juabado, juabadoWeb.PubSub,
+config :juabado, JuabadoWeb.PubSub,
   adapter: Phoenix.PubSub.PG2
 
 # Configures the mailer
-config :juabado, juabado.Mailer, adapter: Swoosh.Adapters.Local
+config :juabado, Juabado.Mailer, adapter: Swoosh.Adapters.Local
 
 # Configure esbuild (the version is required)
 config :esbuild,
@@ -59,6 +59,6 @@ config :phoenix, :json_library, Jason
 import_config "#{config_env()}.exs"
 # config/config.exs
 
-config :juabado, juabadoWeb.Endpoint,
+config :juabado, JuabadoWeb.Endpoint,
   http: [port: System.get_env("PORT") || 4000],  # Default PORT configuration
   url: [host: "postgres-free-tier-v2020.gigalixir.com"]

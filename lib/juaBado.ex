@@ -1,4 +1,4 @@
-defmodule juabado do
+defmodule Juabado do
   @moduledoc """
   juabado keeps the contexts that define your domain
   and business logic.

@@ -1,12 +1,12 @@
-defmodule juabado.StampsTest do
-  use juabado.DataCase
+defmodule Juabado.StampsTest do
+  use Juabado.DataCase
 
-  alias juabado.Stamps
+  alias Juabado.Stamps
 
   describe "juabado" do
-    alias juabado.Stamps.Stamp
+    alias Juabado.Stamps.Stamp
 
-    import juabado.StampsFixtures
+    import Juabado.StampsFixtures
 
     @invalid_attrs %{type: nil, time: nil, activity_id: nil}
 

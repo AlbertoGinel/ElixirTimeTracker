@@ -1,12 +1,12 @@
-defmodule juabadoWeb.Router do
-  use juabadoWeb, :router
+defmodule JuabadoWeb.Router do
+  use JuabadoWeb, :router
   import Phoenix.LiveView.Router
 
   pipeline :browser do
     plug :accepts, ["html"]
     plug :fetch_session
     plug :fetch_live_flash
-    plug :put_root_layout, html: {juabadoWeb.Layouts, :root}
+    plug :put_root_layout, html: {JuabadoWeb.Layouts, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
     plug :put_layout, false
@@ -19,7 +19,7 @@ defmodule juabadoWeb.Router do
   end
 
 
-  scope "/", juabadoWeb do
+  scope "/", JuabadoWeb do
     pipe_through :browser
 
     get "/", PageController, :home
@@ -31,7 +31,7 @@ defmodule juabadoWeb.Router do
 
 
   # Other scopes may use custom stacks.
-  scope "/api", juabadoWeb do
+  scope "/api", JuabadoWeb do
     pipe_through :api
     get "/activities", ActivitiesController, :index
     get "/stamps", StampsController, :index
@@ -55,7 +55,7 @@ defmodule juabadoWeb.Router do
     scope "/dev" do
       pipe_through :browser
 
-      live_dashboard "/dashboard", metrics: juabadoWeb.Telemetry
+      live_dashboard "/dashboard", metrics: JuabadoWeb.Telemetry
       forward "/mailbox", Plug.Swoosh.MailboxPreview
     end
   end

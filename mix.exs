@@ -1,4 +1,4 @@
-defmodule juabado.MixProject do
+defmodule Juabado.MixProject do
   use Mix.Project
 
   def project do
@@ -18,7 +18,7 @@ defmodule juabado.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {juabado.Application, []},
+      mod: {Juabado.Application, []},
       extra_applications: [:logger, :runtime_tools],
       name: :juabado
     ]

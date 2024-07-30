@@ -1,12 +1,12 @@
-defmodule juabado.ActivitiesTest do
-  use juabado.DataCase
+defmodule Juabado.ActivitiesTest do
+  use Juabado.DataCase
 
-  alias juabado.Activities
+  alias Juabado.Activities
 
   describe "juabado" do
-    alias juabado.Activities.Activity
+    alias Juabado.Activities.Activity
 
-    import juabado.ActivitiesFixtures
+    import Juabado.ActivitiesFixtures
 
     @invalid_attrs %{id: nil, name: nil, color: nil, icon: nil, pointsPerHour: nil, secondsFree: nil}
 

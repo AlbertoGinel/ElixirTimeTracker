@@ -9,8 +9,8 @@ defmodule Juabado.Repo.Migrations.CreateActivities do
       add :color, :string
       add :name, :string, null: false
       add :icon, :string, default: "⭕"
-      add :pointsPerHour, :float, default: 0
-      add :secondsFree, :integer, default: 0
+      add :pointsperhour, :float, default: 0
+      add :secondsfree, :integer, default: 0
 
       timestamps(type: :utc_datetime)
     end

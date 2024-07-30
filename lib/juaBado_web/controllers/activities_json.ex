@@ -11,8 +11,8 @@ defmodule JuabadoWeb.ActivitiesJSON do
       name: datum.name,
       color: datum.color,
       icon: datum.icon,
-      pointsPerHour: datum.pointsPerHour,
-      secondsFree: datum.secondsFree
+      pointsperhour: datum.pointsperhour,
+      secondsfree: datum.secondsfree
 		}
 	end
 end

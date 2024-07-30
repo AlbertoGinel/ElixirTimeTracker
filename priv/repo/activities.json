@@ -3,56 +3,56 @@
     "name": "sleep",
     "color": "#0000FF",
     "icon": "🌙",
-    "pointsPerHour": 0,
-    "secondsFree": 0
+    "pointsperhour": 0,
+    "secondsfree": 0
   },
   {
     "name": "study",
     "color": "#008000",
     "icon": "📚",
-    "pointsPerHour": 0,
-    "secondsFree": 0
+    "pointsperhour": 0,
+    "secondsfree": 0
   },
   {
     "name": "exercise",
     "color": "#40E0D0",
     "icon": "💪",
-    "pointsPerHour": 0,
-    "secondsFree": 0
+    "pointsperhour": 0,
+    "secondsfree": 0
   },
   {
     "name": "Inst grat",
     "color": "#FF0000",
     "icon": "💊",
-    "pointsPerHour": 0,
-    "secondsFree": 0
+    "pointsperhour": 0,
+    "secondsfree": 0
   },
   {
     "name": "work",
     "color": "#FFA500",
     "icon": "💼",
-    "pointsPerHour": 0,
-    "secondsFree": 0
+    "pointsperhour": 0,
+    "secondsfree": 0
   },
   {
     "name": "dance",
     "color": "#32CD32",
     "icon": "💃",
-    "pointsPerHour": 0,
-    "secondsFree": 0
+    "pointsperhour": 0,
+    "secondsfree": 0
   },
   {
     "name": "antientropy",
     "color": "#FFFF00",
     "icon": "🧹",
-    "pointsPerHour": 0,
-    "secondsFree": 0
+    "pointsperhour": 0,
+    "secondsfree": 0
   },
   {
     "name": "projects",
     "color": "#800080",
     "icon": "💡",
-    "pointsPerHour": 0,
-    "secondsFree": 0
+    "pointsperhour": 0,
+    "secondsfree": 0
   }
 ]

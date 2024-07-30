@@ -6,8 +6,8 @@ defmodule Juabado.Activities.Activity do
     field :name, :string
     field :color, :string
     field :icon, :string
-    field :pointsPerHour, :float
-    field :secondsFree, :integer
+    field :pointsperhour, :float
+    field :secondsfree, :integer
 
     timestamps(type: :utc_datetime)
 
@@ -17,7 +17,7 @@ defmodule Juabado.Activities.Activity do
   @doc false
   def changeset(activity, attrs) do
     activity
-    |> cast(attrs, [:color, :name, :icon, :pointsPerHour, :secondsFree])
-    |> validate_required([:color, :name, :icon, :pointsPerHour, :secondsFree])
+    |> cast(attrs, [:color, :name, :icon, :pointsperhour, :secondsfree])
+    |> validate_required([:color, :name, :icon, :pointsperhour, :secondsfree])
   end
 end

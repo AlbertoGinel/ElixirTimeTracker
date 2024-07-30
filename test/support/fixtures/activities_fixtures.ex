@@ -15,8 +15,8 @@ defmodule Juabado.ActivitiesFixtures do
         icon: "some icon",
         id: "some id",
         name: "some name",
-        pointsPerHour: 120.5,
-        secondsFree: 42
+        pointsperhour: 120.5,
+        secondsfree: 42
       })
       |> Juabado.Activities.create_activity()
 

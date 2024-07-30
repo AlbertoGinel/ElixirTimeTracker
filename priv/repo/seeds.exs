@@ -9,8 +9,8 @@ activities_path
     name: Map.get(attrs, "name", nil), # Ensure name is not null
     color: Map.get(attrs, "color", "#FFFFFF"), # Default color to white if not provided
     icon: Map.get(attrs, "icon", "⭕"), # Default icon if not provided
-    pointsPerHour: Map.get(attrs, "pointsPerHour", 0), # Default points per hour to 0 if not provided
-    secondsFree: Map.get(attrs, "secondsFree", 0) # Default seconds free to 0 if not provided
+    pointsperhour: Map.get(attrs, "pointsperhour", 0), # Default points per hour to 0 if not provided
+    secondsfree: Map.get(attrs, "secondsfree", 0) # Default seconds free to 0 if not provided
   }
 
 	case Juabado.Activities.create_activity(activity) do

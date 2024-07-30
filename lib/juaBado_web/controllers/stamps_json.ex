@@ -1,5 +1,5 @@
-defmodule JuaBadoWeb.StampsJSON do
-  alias JuaBado.Stamps.Stamp
+defmodule JuabadoWeb.StampsJSON do
+  alias Juabado.Stamps.Stamp
 
   def index(%{stamps: stamps}) do
     %{data: for(stamp <- stamps, do: data(stamp))}

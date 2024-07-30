@@ -1,3 +1,3 @@
-# defmodule JuaBadoWeb.PubSub do
-#   use Phoenix.PubSub, otp_app: :JuaBado
+# defmodule JuabadoWeb.PubSub do
+#   use Phoenix.PubSub, otp_app: :Juabado
 # end

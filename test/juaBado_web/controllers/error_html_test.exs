@@ -1,14 +1,14 @@
-defmodule JuaBadoWeb.ErrorHTMLTest do
-  use JuaBadoWeb.ConnCase, async: true
+defmodule JuabadoWeb.ErrorHTMLTest do
+  use JuabadoWeb.ConnCase, async: true
 
   # Bring render_to_string/4 for testing custom views
   import Phoenix.Template
 
   test "renders 404.html" do
-    assert render_to_string(JuaBadoWeb.ErrorHTML, "404", "html", []) == "Not Found"
+    assert render_to_string(JuabadoWeb.ErrorHTML, "404", "html", []) == "Not Found"
   end
 
   test "renders 500.html" do
-    assert render_to_string(JuaBadoWeb.ErrorHTML, "500", "html", []) == "Internal Server Error"
+    assert render_to_string(JuabadoWeb.ErrorHTML, "500", "html", []) == "Internal Server Error"
   end
 end

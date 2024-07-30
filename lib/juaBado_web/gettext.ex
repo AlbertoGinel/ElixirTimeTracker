@@ -1,11 +1,11 @@
-defmodule JuaBadoWeb.Gettext do
+defmodule JuabadoWeb.Gettext do
   @moduledoc """
   A module providing Internationalization with a gettext-based API.
 
   By using [Gettext](https://hexdocs.pm/gettext),
   your module gains a set of macros for translations, for example:
 
-      import JuaBadoWeb.Gettext
+      import JuabadoWeb.Gettext
 
       # Simple translation
       gettext("Here is the string to translate")
@@ -20,5 +20,5 @@ defmodule JuaBadoWeb.Gettext do
 
   See the [Gettext Docs](https://hexdocs.pm/gettext) for detailed usage.
   """
-  use Gettext, otp_app: :JuaBado
+  use Gettext, otp_app: :Juabado
 end

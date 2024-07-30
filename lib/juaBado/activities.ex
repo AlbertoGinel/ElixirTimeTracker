@@ -1,19 +1,19 @@
-defmodule JuaBado.Activities do
+defmodule Juabado.Activities do
   @moduledoc """
   The Activities context.
   """
 
   import Ecto.Query, warn: false
-  alias JuaBado.Repo
+  alias Juabado.Repo
 
-  alias JuaBado.Activities.Activity
+  alias Juabado.Activities.Activity
 
   @doc """
-  Returns the list of JuaBado.
+  Returns the list of Juabado.
 
   ## Examples
 
-      iex> list_JuaBado()
+      iex> list_Juabado()
       [%Activity{}, ...]
 
   """

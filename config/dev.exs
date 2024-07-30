@@ -1,7 +1,7 @@
 import Config
 
 # Configure your database
-config :JuaBado, JuaBado.Repo,
+config :Juabado, Juabado.Repo,
   username: "postgres",
   password: "postgres",
   hostname: "localhost",
@@ -16,7 +16,7 @@ config :JuaBado, JuaBado.Repo,
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we can use it
 # to bundle .js and .css sources.
-config :JuaBado, JuaBadoWeb.Endpoint,
+config :Juabado, JuabadoWeb.Endpoint,
   # Binding to loopback ipv4 address prevents access from other machines.
   # Change to `ip: {0, 0, 0, 0}` to allow access from other machines.
   http: [ip: {127, 0, 0, 1}, port: 4000],
@@ -25,8 +25,8 @@ config :JuaBado, JuaBadoWeb.Endpoint,
   debug_errors: true,
   secret_key_base: "BlTyNVvSulDw8FgJ+CVrp1WPSOmUIcbtHpRwiZKYt2Jz4T8rg0Bg1ad5dwUTQlYM",
   watchers: [
-    esbuild: {Esbuild, :install_and_run, [:JuaBado, ~w(--sourcemap=inline --watch)]},
-    tailwind: {Tailwind, :install_and_run, [:JuaBado, ~w(--watch)]}
+    esbuild: {Esbuild, :install_and_run, [:Juabado, ~w(--sourcemap=inline --watch)]},
+    tailwind: {Tailwind, :install_and_run, [:Juabado, ~w(--watch)]}
   ]
 
 # ## SSL Support
@@ -53,17 +53,17 @@ config :JuaBado, JuaBadoWeb.Endpoint,
 # different ports.
 
 # Watch static and templates for browser reloading.
-config :JuaBado, JuaBadoWeb.Endpoint,
+config :Juabado, JuabadoWeb.Endpoint,
   live_reload: [
     patterns: [
       ~r"priv/static/(?!uploads/).*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
-      ~r"lib/JuaBado_web/(controllers|live|components)/.*(ex|heex)$"
+      ~r"lib/Juabado_web/(controllers|live|components)/.*(ex|heex)$"
     ]
   ]
 
 # Enable dev routes for dashboard and mailbox
-config :JuaBado, dev_routes: true
+config :Juabado, dev_routes: true
 
 # Do not include metadata nor timestamps in development logs
 config :logger, :console, format: "[$level] $message\n"

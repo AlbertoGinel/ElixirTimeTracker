@@ -1,4 +1,4 @@
-defmodule JuaBado.Stamps.Stamp do
+defmodule Juabado.Stamps.Stamp do
   use Ecto.Schema
   import Ecto.Changeset
 
@@ -9,7 +9,7 @@ defmodule JuaBado.Stamps.Stamp do
 
     timestamps(type: :utc_datetime)
 
-    belongs_to :activity, JuaBado.Activities.Activity, foreign_key: :activity_id
+    belongs_to :activity, Juabado.Activities.Activity, foreign_key: :activity_id
   end
 
   @doc false

@@ -1,7 +1,7 @@
-defmodule JuaBado.ActivitiesFixtures do
+defmodule Juabado.ActivitiesFixtures do
   @moduledoc """
   This module defines test helpers for creating
-  entities via the `JuaBado.Activities` context.
+  entities via the `Juabado.Activities` context.
   """
 
   @doc """
@@ -18,7 +18,7 @@ defmodule JuaBado.ActivitiesFixtures do
         pointsPerHour: 120.5,
         secondsFree: 42
       })
-      |> JuaBado.Activities.create_activity()
+      |> Juabado.Activities.create_activity()
 
     activity
   end

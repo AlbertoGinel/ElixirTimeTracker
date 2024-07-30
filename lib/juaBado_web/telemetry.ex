@@ -1,4 +1,4 @@
-defmodule JuaBadoWeb.Telemetry do
+defmodule JuabadoWeb.Telemetry do
   use Supervisor
   import Telemetry.Metrics
 
@@ -52,23 +52,23 @@ defmodule JuaBadoWeb.Telemetry do
       ),
 
       # Database Metrics
-      summary("JuaBado.repo.query.total_time",
+      summary("Juabado.repo.query.total_time",
         unit: {:native, :millisecond},
         description: "The sum of the other measurements"
       ),
-      summary("JuaBado.repo.query.decode_time",
+      summary("Juabado.repo.query.decode_time",
         unit: {:native, :millisecond},
         description: "The time spent decoding the data received from the database"
       ),
-      summary("JuaBado.repo.query.query_time",
+      summary("Juabado.repo.query.query_time",
         unit: {:native, :millisecond},
         description: "The time spent executing the query"
       ),
-      summary("JuaBado.repo.query.queue_time",
+      summary("Juabado.repo.query.queue_time",
         unit: {:native, :millisecond},
         description: "The time spent waiting for a database connection"
       ),
-      summary("JuaBado.repo.query.idle_time",
+      summary("Juabado.repo.query.idle_time",
         unit: {:native, :millisecond},
         description:
           "The time the connection spent waiting before being checked out for the query"
@@ -86,7 +86,7 @@ defmodule JuaBadoWeb.Telemetry do
     [
       # A module, function and arguments to be invoked periodically.
       # This function must call :telemetry.execute/3 and a metric must be added above.
-      # {JuaBadoWeb, :count_users, []}
+      # {JuabadoWeb, :count_users, []}
     ]
   end
 end

@@ -1,7 +1,7 @@
-defmodule JuaBado.StampsFixtures do
+defmodule Juabado.StampsFixtures do
   @moduledoc """
   This module defines test helpers for creating
-  entities via the `JuaBado.Stamps` context.
+  entities via the `Juabado.Stamps` context.
   """
 
   @doc """
@@ -15,7 +15,7 @@ defmodule JuaBado.StampsFixtures do
         time: ~N[2024-07-21 21:29:00],
         type: "some type"
       })
-      |> JuaBado.Stamps.create_stamp()
+      |> Juabado.Stamps.create_stamp()
 
     stamp
   end

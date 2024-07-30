@@ -1,6 +1,6 @@
-defmodule JuaBado do
+defmodule Juabado do
   @moduledoc """
-  JuaBado keeps the contexts that define your domain
+  Juabado keeps the contexts that define your domain
   and business logic.
 
   Contexts are also responsible for managing your data, regardless

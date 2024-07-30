@@ -1,12 +1,12 @@
-defmodule JuaBadoWeb.ErrorJSONTest do
-  use JuaBadoWeb.ConnCase, async: true
+defmodule JuabadoWeb.ErrorJSONTest do
+  use JuabadoWeb.ConnCase, async: true
 
   test "renders 404" do
-    assert JuaBadoWeb.ErrorJSON.render("404.json", %{}) == %{errors: %{detail: "Not Found"}}
+    assert JuabadoWeb.ErrorJSON.render("404.json", %{}) == %{errors: %{detail: "Not Found"}}
   end
 
   test "renders 500" do
-    assert JuaBadoWeb.ErrorJSON.render("500.json", %{}) ==
+    assert JuabadoWeb.ErrorJSON.render("500.json", %{}) ==
              %{errors: %{detail: "Internal Server Error"}}
   end
 end

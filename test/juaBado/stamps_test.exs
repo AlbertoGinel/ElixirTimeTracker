@@ -1,18 +1,18 @@
-defmodule JuaBado.StampsTest do
-  use JuaBado.DataCase
+defmodule Juabado.StampsTest do
+  use Juabado.DataCase
 
-  alias JuaBado.Stamps
+  alias Juabado.Stamps
 
-  describe "JuaBado" do
-    alias JuaBado.Stamps.Stamp
+  describe "Juabado" do
+    alias Juabado.Stamps.Stamp
 
-    import JuaBado.StampsFixtures
+    import Juabado.StampsFixtures
 
     @invalid_attrs %{type: nil, time: nil, activity_id: nil}
 
-    test "list_JuaBado/0 returns all JuaBado" do
+    test "list_Juabado/0 returns all Juabado" do
       stamp = stamp_fixture()
-      assert Stamps.list_JuaBado() == [stamp]
+      assert Stamps.list_Juabado() == [stamp]
     end
 
     test "get_stamp!/1 returns the stamp with given id" do

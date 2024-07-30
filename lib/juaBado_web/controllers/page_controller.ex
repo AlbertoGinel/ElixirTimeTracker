@@ -1,5 +1,5 @@
-# defmodule JuaBadoWeb.PageController do
-#   use JuaBadoWeb, :controller
+# defmodule JuabadoWeb.PageController do
+#   use JuabadoWeb, :controller
 #   alias HTTPoison
 #   alias Jason
 
@@ -25,8 +25,8 @@
 # end
 
 
-# defmodule JuaBadoWeb.PageController do
-#   use JuaBadoWeb, :controller
+# defmodule JuabadoWeb.PageController do
+#   use JuabadoWeb, :controller
 #   alias HTTPoison
 #   alias Jason
 

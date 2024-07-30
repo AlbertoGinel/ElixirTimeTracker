@@ -1,5 +1,5 @@
-defmodule JuabadoWeb.ActivitiesJSON do
-  alias Juabado.Activities.Activity
+defmodule juabadoWeb.ActivitiesJSON do
+  alias juabado.Activities.Activity
 
   def index(%{activities: activities}) do
     %{data: for(activity <- activities, do: data(activity))}

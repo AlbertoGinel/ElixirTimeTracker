@@ -1,12 +1,12 @@
-defmodule JuabadoWeb.Router do
-  use JuabadoWeb, :router
+defmodule juabadoWeb.Router do
+  use juabadoWeb, :router
   import Phoenix.LiveView.Router
 
   pipeline :browser do
     plug :accepts, ["html"]
     plug :fetch_session
     plug :fetch_live_flash
-    plug :put_root_layout, html: {JuabadoWeb.Layouts, :root}
+    plug :put_root_layout, html: {juabadoWeb.Layouts, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
     plug :put_layout, false
@@ -19,7 +19,7 @@ defmodule JuabadoWeb.Router do
   end
 
 
-  scope "/", JuabadoWeb do
+  scope "/", juabadoWeb do
     pipe_through :browser
 
     get "/", PageController, :home
@@ -31,7 +31,7 @@ defmodule JuabadoWeb.Router do
 
 
   # Other scopes may use custom stacks.
-  scope "/api", JuabadoWeb do
+  scope "/api", juabadoWeb do
     pipe_through :api
     get "/activities", ActivitiesController, :index
     get "/stamps", StampsController, :index
@@ -44,7 +44,7 @@ defmodule JuabadoWeb.Router do
 
 
   # Enable LiveDashboard and Swoosh mailbox preview in development
-  if Application.compile_env(:Juabado, :dev_routes) do
+  if Application.compile_env(:juabado, :dev_routes) do
     # If you want to use the LiveDashboard in production, you should put
     # it behind authentication and allow only admins to access it.
     # If your application does not have an admins-only section yet,
@@ -55,7 +55,7 @@ defmodule JuabadoWeb.Router do
     scope "/dev" do
       pipe_through :browser
 
-      live_dashboard "/dashboard", metrics: JuabadoWeb.Telemetry
+      live_dashboard "/dashboard", metrics: juabadoWeb.Telemetry
       forward "/mailbox", Plug.Swoosh.MailboxPreview
     end
   end

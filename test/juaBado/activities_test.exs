@@ -1,18 +1,18 @@
-defmodule Juabado.ActivitiesTest do
-  use Juabado.DataCase
+defmodule juabado.ActivitiesTest do
+  use juabado.DataCase
 
-  alias Juabado.Activities
+  alias juabado.Activities
 
-  describe "Juabado" do
-    alias Juabado.Activities.Activity
+  describe "juabado" do
+    alias juabado.Activities.Activity
 
-    import Juabado.ActivitiesFixtures
+    import juabado.ActivitiesFixtures
 
     @invalid_attrs %{id: nil, name: nil, color: nil, icon: nil, pointsPerHour: nil, secondsFree: nil}
 
-    test "list_Juabado/0 returns all Juabado" do
+    test "list_juabado/0 returns all juabado" do
       activity = activity_fixture()
-      assert Activities.list_Juabado() == [activity]
+      assert Activities.list_juabado() == [activity]
     end
 
     test "get_activity!/1 returns the activity with given id" do

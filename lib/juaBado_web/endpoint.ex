@@ -1,12 +1,12 @@
-defmodule JuabadoWeb.Endpoint do
-  use Phoenix.Endpoint, otp_app: :Juabado
+defmodule juabadoWeb.Endpoint do
+  use Phoenix.Endpoint, otp_app: :juabado
 
   # The session will be stored in the cookie and signed,
   # this means its contents can be read but not tampered with.
   # Set :encryption_salt if you would also like to encrypt it.
   @session_options [
     store: :cookie,
-    key: "_Juabado_key",
+    key: "_juabado_key",
     signing_salt: "2UOYnrJL",
     same_site: "Lax"
   ]
@@ -21,9 +21,9 @@ defmodule JuabadoWeb.Endpoint do
   # when deploying your static files in production.
   plug Plug.Static,
     at: "/",
-    from: :Juabado,
+    from: :juabado,
     gzip: false,
-    only: JuabadoWeb.static_paths()
+    only: juabadoWeb.static_paths()
 
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
@@ -31,7 +31,7 @@ defmodule JuabadoWeb.Endpoint do
     socket "/phoenix/live_reload/socket", Phoenix.LiveReloader.Socket
     plug Phoenix.LiveReloader
     plug Phoenix.CodeReloader
-    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :Juabado
+    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :juabado
   end
 
   plug Phoenix.LiveDashboard.RequestLogger,
@@ -49,5 +49,5 @@ defmodule JuabadoWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
-  plug JuabadoWeb.Router
+  plug juabadoWeb.Router
 end

@@ -1,7 +1,7 @@
-defmodule Juabado.Stamps do
+defmodule juabado.Stamps do
   import Ecto.Query, warn: false
-  alias Juabado.Repo
-  alias Juabado.Stamps.Stamp
+  alias juabado.Repo
+  alias juabado.Stamps.Stamp
 
   def list_stamps do
     Repo.all(Stamp)
@@ -28,7 +28,7 @@ defmodule Juabado.Stamps do
 
     case Repo.insert(changeset) do
       {:ok, stamp} ->
-        Phoenix.PubSub.broadcast(Juabado.PubSub, "stamps_created", :db_updated)
+        Phoenix.PubSub.broadcast(juabado.PubSub, "stamps_created", :db_updated)
         IO.inspect("Broadcast!!")
         {:ok, stamp}
       {:error, changeset} ->

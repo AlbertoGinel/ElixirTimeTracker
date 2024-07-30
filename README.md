@@ -1,4 +1,4 @@
-# Juabado
+# juabado
 
 To start your Phoenix server:
 

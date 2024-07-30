@@ -1,6 +1,6 @@
-defmodule JuabadoWeb.StampsController do
+defmodule juabadoWeb.StampsController do
   use Phoenix.Controller, formats: [:json]
-  alias Juabado.Stamps
+  alias juabado.Stamps
 
 	def index(conn, _params) do
 		stamps = %{stamps: Stamps.list_stamps()}

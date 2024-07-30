@@ -1,4 +1,4 @@
-defmodule JuabadoWeb.CoreComponents do
+defmodule juabadoWeb.CoreComponents do
   @moduledoc """
   Provides core UI components.
 
@@ -17,7 +17,7 @@ defmodule JuabadoWeb.CoreComponents do
   use Phoenix.Component
 
   alias Phoenix.LiveView.JS
-  import JuabadoWeb.Gettext
+  import juabadoWeb.Gettext
 
   @doc """
   Renders a modal.
@@ -661,9 +661,9 @@ defmodule JuabadoWeb.CoreComponents do
     # with our gettext backend as first argument. Translations are
     # available in the errors.po file (as we use the "errors" domain).
     if count = opts[:count] do
-      Gettext.dngettext(JuabadoWeb.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(juabadoWeb.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(JuabadoWeb.Gettext, "errors", msg, opts)
+      Gettext.dgettext(juabadoWeb.Gettext, "errors", msg, opts)
     end
   end
 

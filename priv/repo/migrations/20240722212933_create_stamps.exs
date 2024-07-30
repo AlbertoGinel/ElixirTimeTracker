@@ -1,4 +1,4 @@
-defmodule Juabado.Repo.Migrations.CreateStamps do
+defmodule juabado.Repo.Migrations.CreateStamps do
   use Ecto.Migration
 
   def change do

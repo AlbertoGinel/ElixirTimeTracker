@@ -1,4 +1,4 @@
-defmodule Juabado.Repo.Migrations.CreateActivities do
+defmodule juabado.Repo.Migrations.CreateActivities do
   use Ecto.Migration
 
   def change do

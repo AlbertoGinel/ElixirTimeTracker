@@ -1,6 +1,6 @@
-defmodule JuabadoWeb.DashboardLive do
+defmodule juabadoWeb.DashboardLive do
   use Phoenix.LiveView
-  use JuabadoWeb, :live_view
+  use juabadoWeb, :live_view
   import Timex
 
   alias HTTPoison
@@ -9,7 +9,7 @@ defmodule JuabadoWeb.DashboardLive do
   @impl true
   def mount(_params, _session, socket) do
 
-    Phoenix.PubSub.subscribe(Juabado.PubSub, "stamps_created")
+    Phoenix.PubSub.subscribe(juabado.PubSub, "stamps_created")
 
     activities_response = HTTPoison.get!("http://localhost:4000/api/activities")
     stamps_response = HTTPoison.get!("http://localhost:4000/api/stamps_complete")

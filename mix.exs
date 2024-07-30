@@ -1,9 +1,9 @@
-defmodule Juabado.MixProject do
+defmodule juabado.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :Juabado,
+      app: :juabado,
       version: "0.1.0",
       elixir: "~> 1.14",
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -18,9 +18,9 @@ defmodule Juabado.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {Juabado.Application, []},
+      mod: {juabado.Application, []},
       extra_applications: [:logger, :runtime_tools],
-      name: :Juabado
+      name: :juabado
     ]
   end
 
@@ -79,10 +79,10 @@ defmodule Juabado.MixProject do
       "ecto.reset": ["ecto.drop", "ecto.setup"],
       test: ["ecto.create --quiet", "ecto.migrate --quiet", "test"],
       "assets.setup": ["tailwind.install --if-missing", "esbuild.install --if-missing"],
-      "assets.build": ["tailwind Juabado", "esbuild Juabado"],
+      "assets.build": ["tailwind juabado", "esbuild juabado"],
       "assets.deploy": [
-        "tailwind Juabado --minify",
-        "esbuild Juabado --minify",
+        "tailwind juabado --minify",
+        "esbuild juabado --minify",
         "phx.digest"
       ]
     ]

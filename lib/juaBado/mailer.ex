@@ -1,3 +1,3 @@
-defmodule Juabado.Mailer do
-  use Swoosh.Mailer, otp_app: :Juabado
+defmodule juabado.Mailer do
+  use Swoosh.Mailer, otp_app: :juabado
 end

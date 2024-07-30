@@ -1,5 +1,5 @@
-defmodule Juabado.Repo do
+defmodule juabado.Repo do
   use Ecto.Repo,
-    otp_app: :Juabado,
+    otp_app: :juabado,
     adapter: Ecto.Adapters.Postgres
 end

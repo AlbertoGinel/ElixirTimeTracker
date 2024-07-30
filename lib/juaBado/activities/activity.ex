@@ -1,4 +1,4 @@
-defmodule Juabado.Activities.Activity do
+defmodule juabado.Activities.Activity do
   use Ecto.Schema
   import Ecto.Changeset
 
@@ -11,7 +11,7 @@ defmodule Juabado.Activities.Activity do
 
     timestamps(type: :utc_datetime)
 
-    has_many :stamps, Juabado.Stamps.Stamp
+    has_many :stamps, juabado.Stamps.Stamp
   end
 
   @doc false

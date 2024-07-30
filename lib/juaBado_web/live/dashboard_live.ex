@@ -21,7 +21,7 @@ defmodule JuabadoWeb.DashboardLive do
     formatted_stamps = add_time_formatted(reversed_stamps)
     formatted_stamps2 = add_current_duration(formatted_stamps)
 
-    Process.send_after(self(), :update_clock, 1000)
+    #Process.send_after(self(), :update_clock, 1000)
 
 
     {:ok, assign(socket, activities: activities["data"], stamps: formatted_stamps2), layout: false}

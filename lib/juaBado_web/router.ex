@@ -22,10 +22,10 @@ defmodule JuabadoWeb.Router do
   scope "/", JuabadoWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    #get "/", PageController, :home
 
     get "/dashboard", PageController, :home
-    live "/dashboardlive", DashboardLive
+    live "/", DashboardLive
 
   end
 

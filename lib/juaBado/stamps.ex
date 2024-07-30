@@ -17,7 +17,8 @@ defmodule Juabado.Stamps do
   end
 
   def create_stamp_now(id, type) do
-    current_time = DateTime.utc_now()
+    #current_time = DateTime.utc_now()
+    current_time = DateTime.utc_now() |> DateTime.truncate(:second) |> DateTime.to_naive()
     create_stamp(%{activity_id: id, type: type, time: current_time})
   end
 

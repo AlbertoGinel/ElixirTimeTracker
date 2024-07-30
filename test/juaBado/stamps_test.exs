@@ -3,16 +3,16 @@ defmodule JuaBado.StampsTest do
 
   alias JuaBado.Stamps
 
-  describe "juabado" do
+  describe "JuaBado" do
     alias JuaBado.Stamps.Stamp
 
     import JuaBado.StampsFixtures
 
     @invalid_attrs %{type: nil, time: nil, activity_id: nil}
 
-    test "list_juabado/0 returns all juabado" do
+    test "list_JuaBado/0 returns all JuaBado" do
       stamp = stamp_fixture()
-      assert Stamps.list_juabado() == [stamp]
+      assert Stamps.list_JuaBado() == [stamp]
     end
 
     test "get_stamp!/1 returns the stamp with given id" do

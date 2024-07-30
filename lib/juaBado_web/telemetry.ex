@@ -52,23 +52,23 @@ defmodule JuaBadoWeb.Telemetry do
       ),
 
       # Database Metrics
-      summary("juaBado.repo.query.total_time",
+      summary("JuaBado.repo.query.total_time",
         unit: {:native, :millisecond},
         description: "The sum of the other measurements"
       ),
-      summary("juaBado.repo.query.decode_time",
+      summary("JuaBado.repo.query.decode_time",
         unit: {:native, :millisecond},
         description: "The time spent decoding the data received from the database"
       ),
-      summary("juaBado.repo.query.query_time",
+      summary("JuaBado.repo.query.query_time",
         unit: {:native, :millisecond},
         description: "The time spent executing the query"
       ),
-      summary("juaBado.repo.query.queue_time",
+      summary("JuaBado.repo.query.queue_time",
         unit: {:native, :millisecond},
         description: "The time spent waiting for a database connection"
       ),
-      summary("juaBado.repo.query.idle_time",
+      summary("JuaBado.repo.query.idle_time",
         unit: {:native, :millisecond},
         description:
           "The time the connection spent waiting before being checked out for the query"

@@ -3,7 +3,7 @@ defmodule JuaBado.MixProject do
 
   def project do
     [
-      app: :juabado,
+      app: :JuaBado,
       version: "0.1.0",
       elixir: "~> 1.14",
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -78,10 +78,10 @@ defmodule JuaBado.MixProject do
       "ecto.reset": ["ecto.drop", "ecto.setup"],
       test: ["ecto.create --quiet", "ecto.migrate --quiet", "test"],
       "assets.setup": ["tailwind.install --if-missing", "esbuild.install --if-missing"],
-      "assets.build": ["tailwind juabado", "esbuild juabado"],
+      "assets.build": ["tailwind JuaBado", "esbuild JuaBado"],
       "assets.deploy": [
-        "tailwind juabado --minify",
-        "esbuild juabado --minify",
+        "tailwind JuaBado --minify",
+        "esbuild JuaBado --minify",
         "phx.digest"
       ]
     ]

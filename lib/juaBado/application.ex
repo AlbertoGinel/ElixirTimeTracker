@@ -10,7 +10,7 @@ defmodule JuaBado.Application do
     children = [
       JuaBadoWeb.Telemetry,
       JuaBado.Repo,
-      {DNSCluster, query: Application.get_env(:juaBado, :dns_cluster_query) || :ignore},
+      {DNSCluster, query: Application.get_env(:JuaBado, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: JuaBado.PubSub},
       # Start the Finch HTTP client for sending emails
       {Finch, name: JuaBado.Finch},

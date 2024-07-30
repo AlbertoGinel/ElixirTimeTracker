@@ -3,16 +3,16 @@ defmodule JuaBado.ActivitiesTest do
 
   alias JuaBado.Activities
 
-  describe "juabado" do
+  describe "JuaBado" do
     alias JuaBado.Activities.Activity
 
     import JuaBado.ActivitiesFixtures
 
     @invalid_attrs %{id: nil, name: nil, color: nil, icon: nil, pointsPerHour: nil, secondsFree: nil}
 
-    test "list_juabado/0 returns all juabado" do
+    test "list_JuaBado/0 returns all JuaBado" do
       activity = activity_fixture()
-      assert Activities.list_juabado() == [activity]
+      assert Activities.list_JuaBado() == [activity]
     end
 
     test "get_activity!/1 returns the activity with given id" do

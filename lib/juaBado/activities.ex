@@ -9,11 +9,11 @@ defmodule JuaBado.Activities do
   alias JuaBado.Activities.Activity
 
   @doc """
-  Returns the list of juabado.
+  Returns the list of JuaBado.
 
   ## Examples
 
-      iex> list_juabado()
+      iex> list_JuaBado()
       [%Activity{}, ...]
 
   """

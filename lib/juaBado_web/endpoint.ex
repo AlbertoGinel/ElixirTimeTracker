@@ -1,12 +1,12 @@
 defmodule JuaBadoWeb.Endpoint do
-  use Phoenix.Endpoint, otp_app: :juaBado
+  use Phoenix.Endpoint, otp_app: :JuaBado
 
   # The session will be stored in the cookie and signed,
   # this means its contents can be read but not tampered with.
   # Set :encryption_salt if you would also like to encrypt it.
   @session_options [
     store: :cookie,
-    key: "_juaBado_key",
+    key: "_JuaBado_key",
     signing_salt: "2UOYnrJL",
     same_site: "Lax"
   ]
@@ -21,7 +21,7 @@ defmodule JuaBadoWeb.Endpoint do
   # when deploying your static files in production.
   plug Plug.Static,
     at: "/",
-    from: :juaBado,
+    from: :JuaBado,
     gzip: false,
     only: JuaBadoWeb.static_paths()
 
@@ -31,7 +31,7 @@ defmodule JuaBadoWeb.Endpoint do
     socket "/phoenix/live_reload/socket", Phoenix.LiveReloader.Socket
     plug Phoenix.LiveReloader
     plug Phoenix.CodeReloader
-    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :juaBado
+    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :JuaBado
   end
 
   plug Phoenix.LiveDashboard.RequestLogger,

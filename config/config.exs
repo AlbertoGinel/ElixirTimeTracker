@@ -1,12 +1,12 @@
 # General application configuration
 import Config
 
-config :juabado,
+config :JuaBado,
   ecto_repos: [JuaBado.Repo],
   generators: [timestamp_type: :utc_datetime]
 
 # Configures the endpoint
-config :juabado, JuaBadoWeb.Endpoint,
+config :JuaBado, JuaBadoWeb.Endpoint,
   #url: [host: "localhost"],
   adapter: Bandit.PhoenixAdapter,
   render_errors: [
@@ -18,16 +18,16 @@ config :juabado, JuaBadoWeb.Endpoint,
 
 
 # Configuring the PubSub Adapter
-config :juabado, JuaBadoWeb.PubSub,
+config :JuaBado, JuaBadoWeb.PubSub,
   adapter: Phoenix.PubSub.PG2
 
 # Configures the mailer
-config :juabado, JuaBado.Mailer, adapter: Swoosh.Adapters.Local
+config :JuaBado, JuaBado.Mailer, adapter: Swoosh.Adapters.Local
 
 # Configure esbuild (the version is required)
 config :esbuild,
   version: "0.17.11",
-  juabado: [
+  JuaBado: [
     args:
       ~w(js/app.js --bundle --target=es2017 --outdir=../priv/static/assets --external:/fonts/* --external:/images/*),
     cd: Path.expand("../assets", __DIR__),
@@ -37,7 +37,7 @@ config :esbuild,
 # Configure tailwind (the version is required)
 config :tailwind,
   version: "3.4.3",
-  juabado: [
+  JuaBado: [
     args: ~w(
       --config=tailwind.config.js
       --input=css/app.css
@@ -59,6 +59,6 @@ config :phoenix, :json_library, Jason
 import_config "#{config_env()}.exs"
 # config/config.exs
 
-config :juabado, JuaBadoWeb.Endpoint,
+config :JuaBado, JuaBadoWeb.Endpoint,
   http: [port: System.get_env("PORT") || 4000],  # Default PORT configuration
   url: [host: "postgres-free-tier-v2020.gigalixir.com"]

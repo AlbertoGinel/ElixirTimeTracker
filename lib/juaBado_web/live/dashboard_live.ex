@@ -100,16 +100,9 @@ end
     Enum.map(stamps, fn stamp ->
       time = stamp["time"]
 
-      IO.inspect(time, label: "Original Time String")
-
       case Timex.parse(time, "{ISO:Extended}") do
         {:ok, naive_datetime} ->
-          IO.inspect("     ")
-          IO.inspect(naive_datetime, label: "Original Naive Datetime")
-
           local_datetime = Timex.to_datetime(naive_datetime, Timex.local().time_zone)
-          IO.inspect(local_datetime, label: "Local Datetime with Timezone")
-
           formatted_time = Timex.format!(local_datetime, "{h24}:{m} {0D}/{0M}/{YY}")
           Map.put(stamp, "time_formatted", formatted_time)
 

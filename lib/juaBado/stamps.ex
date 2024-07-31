@@ -22,6 +22,8 @@ defmodule Juabado.Stamps do
     create_stamp(%{activity_id: id, type: type, time: current_time})
   end
 
+
+
   def get_stamp!(id), do: Repo.get!(Stamp, id)
 
   def create_stamp(attrs \\ %{}) do
